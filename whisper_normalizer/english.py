@@ -512,6 +512,13 @@ class EnglishTextNormalizer:
             r"\bcoulda\b": "could have",
             r"\bshoulda\b": "should have",
             r"\bma'am\b": "madam",
+            r"\bhafta\b" : "have to",
+            r"\bhasta\b" : "has to",
+            r"\boutta\b" : "out of",
+            r"\bsposta\b" : "supposed to",
+            r"\bkinda\b" : "kind of",
+            r"\bsorta\b" : "sort of",
+            r"\boughta\b" : "ought to",
             # contractions in titles/prefixes
             r"\bmr\b": "mister ",
             r"\bmrs\b": "missus ",
@@ -551,7 +558,7 @@ class EnglishTextNormalizer:
             r"'ve\b": " have",
             r"'m\b": " am",
         }
-        self.standardize_numbers = EnglishNumberNormalizer()
+        # self.standardize_numbers = EnglishNumberNormalizer()
         self.standardize_spellings = EnglishSpellingNormalizer()
 
     def __call__(self, s: str):
