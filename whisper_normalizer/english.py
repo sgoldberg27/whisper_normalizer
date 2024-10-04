@@ -576,7 +576,7 @@ class EnglishTextNormalizer:
         s = re.sub(r"\.([^0-9]|$)", r" \1", s)  # remove periods not followed by numbers
         s = remove_symbols_and_diacritics(s, keep=".%$¢€£")  # keep numeric symbols
 
-        s = self.standardize_numbers(s)
+        # s = self.standardize_numbers(s)
         s = self.standardize_spellings(s)
 
         # now remove prefix/suffix symbols that are not preceded/followed by numbers
